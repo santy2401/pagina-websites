@@ -367,3 +367,130 @@ header {
     }
     .arrow { display: none; }
 }
+
+
+
+/* ========================================= */
+/* ESTILOS ESPECÍFICOS PARA LA PÁGINA CALLBOT */
+/* ========================================= */
+
+:root {
+    --primary-callbot: #36b3a7; /* Verde turquesa CallBot */
+    --hover-callbot: #2a8c83;
+    --bg-light-callbot: #e6f7f6; /* Verde muy claro para fondos */
+    --cta-orange: #e76f51; /* Naranja/Rojo del formulario */
+}
+
+/* Utilidades generales */
+.centered-text { text-align: center; }
+.bold { font-weight: 700; }
+.green-text { color: var(--primary-callbot); }
+.white-text { color: #fff; }
+.bg-light-green { background-color: var(--bg-light-callbot); }
+.shadow-media { box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 8px; }
+
+/* Botón Primario CallBot */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-callbot);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px; /* Más redondeado que el anterior */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: var(--hover-callbot);
+}
+
+/* Header CallBot */
+.main-header .small-logo {
+    font-size: 12px;
+    color: var(--text-dark);
+    font-weight: 400;
+    display: block;
+    margin-top: -5px;
+}
+
+/* Hero Section CallBot */
+.hero-callbot {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/restaurant-bg.jpg'); /* Imagen de fondo con overlay oscuro */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0 100px 0;
+}
+.hero-callbot h1 { font-size: 48px; margin-bottom: 20px; font-weight: 700; }
+.hero-callbot p { font-size: 18px; max-width: 700px; margin: 0 auto 30px auto; font-weight: 300; }
+
+/* Media Section */
+.media-section { padding: 80px 0; background-color: #fff; }
+.centered-content { display: flex; justify-content: center; }
+.media-container img { max-width: 100%; height: auto; }
+
+/* About Section */
+.about-section { padding: 80px 0; }
+.two-columns { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
+.about-icon img { max-width: 120px; }
+.about-content h2 { font-size: 36px; margin-bottom: 20px; }
+.about-content p { margin-bottom: 15px; color: #555; }
+.about-content .small-text { font-size: 14px; color: #777; line-height: 1.8; }
+
+/* Why Section & Advantages */
+.why-section { padding: 100px 0; }
+.why-section h2 { font-size: 36px; margin-bottom: 15px; }
+.why-section > p { margin-bottom: 60px; color: #555; }
+.advantages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.adv-item h4 { color: #333; margin-bottom: 10px; font-weight: 600; }
+.adv-item p { font-size: 14px; color: #666; }
+
+/* Features Section */
+.features-section { padding: 100px 0; }
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 60px; }
+.feature-card { background: #fff; padding: 40px 20px; border-radius: 8px; border: 1px solid #eee; transition: box-shadow 0.3s ease; }
+.feature-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+.feature-icon { font-size: 40px; margin-bottom: 20px; }
+.feature-card h4 { margin-bottom: 15px; color: #333; }
+.feature-card p { font-size: 13px; color: #666; }
+
+/* Comparison Table */
+.comparison-section { padding: 100px 0; }
+.table-container { background: #fff; margin-top: 60px; overflow-x: auto; /* Para móviles */ }
+.comparison-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+.comparison-table th, .comparison-table td { padding: 20px; text-align: left; border-bottom: 1px solid #eee; }
+.comparison-table thead th { background-color: #f9f9f9; color: var(--text-dark); font-weight: 600; }
+.comparison-table thead th.green-bg { background-color: var(--primary-callbot); color: white; }
+.comparison-table tbody td { font-size: 14px; }
+.check-green { color: var(--primary-callbot); margin-right: 8px; font-size: 16px; }
+.check-red { color: #e74c3c; margin-right: 8px; font-size: 16px; }
+
+/* Contact Section CallBot */
+.contact-section-callbot { padding: 100px 0; background-color: var(--primary-callbot); }
+.two-columns-form { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.form-content h2 { font-size: 36px; margin-bottom: 20px; line-height: 1.3; }
+.form-content p { font-size: 16px; line-height: 1.8; opacity: 0.9; }
+.form-inputs form { display: flex; flex-direction: column; gap: 15px; }
+.form-inputs input, .form-inputs textarea { padding: 15px; border: none; border-radius: 4px; font-family: inherit; }
+.btn-submit-orange {
+    background-color: var(--cta-orange);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-submit-orange:hover { background-color: #d35d41; }
+
+/* Footer CallBot */
+.footer-callbot { padding: 60px 0 0 0; background-color: #fff; }
+.footer-grid-callbot { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; align-items: center; padding-bottom: 40px; }
+.footer-contact-info p { font-size: 14px; color: #666; margin-bottom: 5px; }
+.footer-social { display: flex; gap: 15px; justify-content: flex-end; }
+.footer-social a { color: var(--primary-callbot); font-size: 18px; transition: color 0.3s ease; }
+.footer-social a:hover { color: var(--hover-callbot); }
+.copyright-bar { border-top: 1px solid #eee; padding: 20px 0; font-size: 12px; color: #888; }
