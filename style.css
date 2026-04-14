@@ -490,3 +490,75 @@ body {
     .about-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; }
     .about-logo { margin: 0 auto; }
 }
+/* --- FEATURES SECTION --- */
+.features-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* El cuadrito gris de fondo para el icono */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #f4f7f6; /* Gris muy claro azulado */
+    border-radius: 12px; /* Esquinas redondeadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .icon-box {
+    transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
+    background-color: #e9f2f1;
+}
+
+/* Estilo del icono de FontAwesome */
+.icon-box i {
+    color: var(--primary-green);
+    font-size: 24px;
+}
+
+.feature-item h4 {
+    font-size: 18px;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    max-width: 200px;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
