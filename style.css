@@ -367,137 +367,126 @@ header {
     }
     .arrow { display: none; }
 }
-
-
-/* ========================================= */
-/* ESTILOS ESPECÍFICOS PARA LA HERO SECTION */
-/* ========================================= */
-
+/* VARIABLES */
 :root {
-    --color-primary: #32a38b;    /* Verde turquesa exacto */
-    --color-accent: #e88145;     /* Naranja exacto */
-    --color-text-dark: #333333;  /* Texto oscuro */
-    --white: #ffffff;
+    --primary-green: #36b3a7;
+    --accent-orange: #e88145;
+    --text-dark: #333;
+    --white: #fff;
+    --bg-light: #f9f9f9;
 }
 
-/* Reinicio básico para asegurar que no haya márgenes raros */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body { font-family: 'Poppins', sans-serif; } /* Asegúrate de importar la fuente Poppins en el HTML */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
 
-/* Contenedor universal para centrar */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- Estilos Generales de Texto y Botones --- */
-.green-text { color: var(--color-primary); }
-.orange-text { color: var(--color-accent); }
+.centered { text-align: center; }
+.green-text { color: var(--primary-green); }
+.orange-text { color: var(--accent-orange); }
+.white-text { color: white; }
+.bold { font-weight: 700; }
 
-/* Botón pequeño del header superior */
-.btn-small-header {
-    background-color: var(--color-accent);
-    color: white;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
+/* HERO CALLBOT */
+.hero-callbot {
+    padding: 80px 0;
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                url('img/restaurant-bg.jpg'); /* Fondo de restaurante difuminado */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 
-/* Botón grande principal */
-.btn-large-hero {
+.logo-hero { margin-bottom: 50px; }
+.logo-hero .bold { font-size: 48px; }
+.logo-hero .small-logo { font-size: 16px; display: block; margin-top: -10px; }
+
+.hero-content h1 { font-size: 42px; margin-bottom: 20px; }
+.hero-content p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; }
+
+.btn-callbot {
     display: inline-block;
-    background-color: var(--color-accent);
+    background: var(--primary-green);
     color: white;
-    padding: 16px 35px;
-    border-radius: 5px;
+    padding: 12px 40px;
+    border-radius: 30px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 15px;
-    margin-top: 30px; /* Separación del texto */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra suave */
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* --- Estructura de la Hero Section --- */
-.hero-section {
-    position: relative;
-    background-color: #ffffff; /* Fondo blanco detrás de la imagen */
-    overflow: hidden; /* Para que la diagonal no se salga */
-    padding-bottom: 50px; /* Aire abajo */
+/* MEDIA SECTION */
+.media-section { padding: 60px 0; }
+.main-img { 
+    width: 100%; 
+    max-width: 700px; 
+    border-radius: 10px; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
 }
 
-/* Grid de dos columnas para texto e imagen */
-.hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    align-items: center; /* Alineación vertical centrada */
-    gap: 50px;
-    position: relative;
-    z-index: 10; /* Por encima de la capa verde */
+/* ABOUT SECTION */
+.about-section { padding: 80px 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; }
+.about-logo img { width: 120px; }
+.about-text h2 { font-size: 32px; margin-bottom: 15px; }
+.about-text .intro { font-weight: 600; margin-bottom: 10px; }
+.about-text .description { font-size: 14px; color: #666; margin-bottom: 20px; }
+
+/* WHY SECTION */
+.why-section { padding: 80px 0; background: var(--bg-light); }
+.advantages-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px; 
+    margin-top: 50px; 
+}
+.adv-card h4 { margin-bottom: 10px; font-size: 18px; }
+.adv-card p { font-size: 14px; color: #666; }
+
+/* TABLE */
+.comparison-section { padding: 80px 0; }
+.table-wrapper { margin-top: 40px; overflow-x: auto; }
+.comp-table { width: 100%; border-collapse: collapse; background: white; }
+.comp-table th, .comp-table td { padding: 20px; border: 1px solid #eee; text-align: left; }
+.comp-table th.highlight { background: var(--primary-green); color: white; }
+.fa-check-circle { color: var(--primary-green); }
+.fa-times-circle { color: #ff5f5f; }
+
+/* FOOTER FORM */
+.contact-footer { padding: 80px 0; background: var(--primary-green); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.footer-form form { display: flex; flex-direction: column; gap: 15px; }
+.footer-form input, .footer-form textarea { 
+    padding: 15px; 
+    border-radius: 5px; 
+    border: none; 
+}
+.btn-submit { 
+    background: var(--accent-orange); 
+    color: white; 
+    padding: 15px; 
+    border: none; 
+    border-radius: 5px; 
+    font-weight: 700; 
+    cursor: pointer; 
 }
 
-/* --- Columna Izquierda (Texto) --- */
-.hero-text-content {
-    padding-top: 40px;
-    color: white; /* Texto blanco porque va sobre fondo verde */
-}
-
-/* Logo y botón superior */
-.hero-header-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 80px; /* Separación del título */
-}
-
-/* Estilos del logo */
-.logo { font-weight: 700; line-height: 1; }
-.logo-main { font-size: 26px; }
-.logo-sub { font-weight: 400; font-size: 14px; display: block; margin-top: -3px; }
-
-/* Títulos y párrafos */
-.hero-text-content h1 {
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero-text-content p {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-/* --- Columna Derecha (Imagen) --- */
-.hero-image-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* La imagen se "apoya" en la base */
-}
-
-/* Estilos de la imagen del constructor */
-.constructor-img {
-    max-width: 100%; /* Se ajusta a su columna */
-    height: auto;
-    z-index: 20; /* Asegura estar sobre el fondo verde */
-    display: block; /* Elimina espacios vacíos debajo */
-}
-
-/* ========================================= */
-/* EL TRUCO: Capa de Fondo Verde Diagonal */
-/* ========================================= */
-.hero-green-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%; /* Cubre más de la mitad izquierda */
-    height: 100%;
-    background-color: var(--color-primary); /* Color verde turquesa */
-    transform: skewX(-10deg); /* Angulo diagonal */
-    transform-origin: top left; /* Eje de rotación */
-    z-index: 1; /* Por debajo de todo el contenido */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-grid, .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .about-logo { margin: 0 auto; }
 }
