@@ -403,18 +403,27 @@ body {
 
 /* HERO CALLBOT */
 .hero-callbot {
-    padding: 80px 0;
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
-                url('img/restaurant-bg.jpg'); /* Fondo de restaurante difuminado */
+    padding: 100px 0; /* Un poco más de espacio */
+    /* Reemplazamos el fondo anterior por tu imagen local */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                url("BG.jpg"); 
     background-size: cover;
     background-position: center;
+    background-attachment: scroll; /* Para que se mueva con el scroll */
     text-align: center;
 }
 
 .logo-hero { margin-bottom: 50px; }
-.logo-hero .bold { font-size: 48px; }
-.logo-hero .small-logo { font-size: 16px; display: block; margin-top: -10px; }
-
+.logo-hero .bold { 
+    font-size: 54px; 
+    letter-spacing: -1px;
+}
+.logo-hero .small-logo { 
+    font-size: 18px; 
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: -5px;
+}
 .hero-content h1 { font-size: 42px; margin-bottom: 20px; }
 .hero-content p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; }
 
@@ -467,13 +476,38 @@ body {
 .fa-times-circle { color: #ff5f5f; }
 
 /* FOOTER FORM */
-.contact-footer { padding: 80px 0; background: var(--primary-green); }
+.contact-footer { 
+    padding: 100px 0; /* Un poco más de espacio arriba y abajo */
+    /* Aquí aplicamos la imagen con un tinte cian/verde-azul */
+    background: linear-gradient(rgba(54, 179, 167, 0.85), rgba(54, 179, 167, 0.85)), 
+                url("BG.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: efecto parallax sutil */
+    color: white; /* Asegura que todo el texto base sea blanco */
+}
 .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 .footer-form form { display: flex; flex-direction: column; gap: 15px; }
 .footer-form input, .footer-form textarea { 
     padding: 15px; 
     border-radius: 5px; 
     border: none; 
+}
+.footer-info h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+.footer-info p {
+    font-size: 16px;
+    margin-bottom: 15px; /* Espacio entre párrafos */
+    opacity: 0.9; /* Ligeramente más suave que el título */
+}.footer-info p:last-child {
+    margin-bottom: 0; /* Quita el margen al último párrafo */
+}
+.footer-form input, .footer-form textarea {
+    background-color: white;
+    color: var(--text-dark);
 }
 .btn-submit { 
     background: var(--accent-orange); 

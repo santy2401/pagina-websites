@@ -1,7 +1,7 @@
 :root {
     --navy: #0e0a6e;
     --text-gray: #555;
-    --light-blue: #e3f2fd;
+    --light-blue: #eef6fc;
     --white: #ffffff;
 }
 
@@ -16,7 +16,7 @@ body { font-family: 'Poppins', sans-serif; color: var(--navy); line-height: 1.6;
 .btn-dark {
     display: inline-block;
     background: var(--navy);
-    color: white;
+    color: rgb(253, 253, 253);
     padding: 10px 30px;
     border-radius: 20px;
     text-decoration: none;
